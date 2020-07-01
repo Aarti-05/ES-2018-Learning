@@ -75,11 +75,32 @@
 // }
 // postData();
 //////****************async/await********************** */////////////
-async function getData(){
-    const x=await fetch("https://api.github.com/users");
-    const y=await x.json();
-    return y;
+// async function getData(){
+//     const x=await fetch("https://api.github.com/users");
+//     const y=await x.json();
+//     return y;
+// }
+// getData().then((data)=>{
+//     console.log(data);
+// });
+/////// ************error handling*********custom error ,try catch,finally/////////////////////////////
+// let x= "a";
+// if(x!=undefined){
+//     throw new Error("not good");
+// }
+//     else{
+
+//    console.log("this is undefined");
+    
+// }
+/////////////**************try and catch*********************** */
+try{
+    x;
+    console.log("hiiii")
+}catch(error){
+    console.log("error",error.message);
 }
-getData().then((data)=>{
-    console.log(data);
-});
+finally{
+    console.log("execute")
+}
+
