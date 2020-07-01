@@ -67,33 +67,33 @@
 //     });
 // }
 // getData();
-// function postData(){
-//     url="http://dummy.restapiexample.com/api/v1/create";
-//     data={"name":"xyz","salary":"123","age":"23"}
-//     para={
-//         method:"post",
-//         headers:{
-//             "content-type":'application/json'
-//     },
-//     body:data}
-//     fetch(url,para).then((response)=>{
-//         return response.json();
-//     }).then((data)=>{
-//         console.log(data);
-//     })
-// }
-// postData();
-async function harry(){
-    console.log(" 1 .Inside the function");
-    const response=await fetch(`https://api.github.com/users`);
-    console.log(" 2 .before response");
-    const users=await response.json();
-    console.log(" 3 .users resolved");
-return users;
+function postData(){
+    url="http://dummy.restapiexample.com/api/v1/create";
+    data={"name":"jiya","salary":"123","age":"23"}
+    para={
+        method:"post",
+        headers:{
+            "content-type":'application/json'
+    },
+    body:data}
+    fetch(url,para).then((response)=>{
+        return response.json();
+    }).then((data)=>{
+        console.log(data);
+    })
 }
-console.log("before calling the function")
-let a= harry();
-console.log("after calling the function")
-console.log(a);
-a.then((data)=>console.log(data));
-console.log("last line of code")
+postData();
+// async function harry(){
+//     console.log(" 1 .Inside the function");
+//     const response=await fetch(`https://api.github.com/users`);
+//     console.log(" 2 .before response");
+//     const users=await response.json();
+//     console.log(" 3 .users resolved");
+// return users;
+// }
+// console.log("before calling the function")
+// let a= harry();
+// console.log("after calling the function")
+// console.log(a);
+// a.then((data)=>console.log(data));
+// console.log("last line of code")
