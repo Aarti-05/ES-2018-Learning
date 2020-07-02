@@ -94,13 +94,40 @@
     
 // }
 /////////////**************try and catch*********************** */
-try{
-    x;
-    console.log("hiiii")
-}catch(error){
-    console.log("error",error.message);
-}
-finally{
-    console.log("execute")
-}
+// try{
+//     x;
+//     console.log("hiiii")
+// }catch(error){
+//     console.log("error",error.message);
+// }
+// finally{
+//     console.log("execute")
+// }
+/////*******iterator*********** */
 
+function fruits(values){
+    let i=0;
+    return{
+        next:function(){
+            if (i<values.length){
+                return {
+                    value:values[i++],
+                    done:false
+                }}
+                else{
+                    return{
+                        done:true
+                    }
+                }
+            }
+        }
+    }
+    
+    const myfruits=fruits(myArray);
+    
+    const myArray=['apple','banana','grapes'];
+    console.log(fruits(myArray).next().value);
+    console.log(fruits(myArray).next().value);
+    console.log(fruits(myArray).next().value);
+
+    
