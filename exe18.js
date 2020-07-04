@@ -29,13 +29,26 @@
 //         console.log(i,"is odd number");
 //     }
 // }
-let student=[ ['David',80],['Vinoth',77],['Divya',88],['Ishitha',95],['Thomas',68]];
-let ave=0;
-for (i=0;i<student.length;i++){
-ave+=student[i][1];
+// let student=[ ['David',80],['Vinoth',77],['Divya',88],['Ishitha',95],['Thomas',68]];
+// let ave=0;
+// for (i=0;i<student.length;i++){
+// ave+=student[i][1];
 
+// }
+// ave=ave/student.length;
+// console.log(ave)
+for (i=1;i<=100;i++){
+    if(i%3===0 && i%5===0){
+        console.log("fizz,buzz",i);
+    }
+    else if(i%3===0){
+        console.log("fizz",i);
+
+    }
+    else if(i%5===0){
+        console.log("buzz",i);
+    }
+    
 }
-ave=ave/student.length;
-console.log(ave)
 
 
