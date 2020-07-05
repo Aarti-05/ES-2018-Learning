@@ -50,18 +50,26 @@
 //     }
     
 
-const arm=(num)=>
-{
-    for (i=1;i<10;i++){
-        for (j=0;j<10;j++){
-            for (k=0;k<10;k++){
-                let x=Math.pow(i,3)+Math.pow(j,3)+Math.pow(k,3);
-                let y=i*100+j*10+k;
-                if(x===y){
-                    console.log(x)
-                }
-            }
-        }
+// const arm=(num)=>
+// {
+//     for (i=1;i<10;i++){
+//         for (j=0;j<10;j++){
+//             for (k=0;k<10;k++){
+//                 let x=Math.pow(i,3)+Math.pow(j,3)+Math.pow(k,3);
+//                 let y=i*100+j*10+k;
+//                 if(x===y){
+//                     console.log(x)
+//                 }
+//             }
+//         }
+//     }
+// }
+// arm();
+for (let i=1;i<=5;i++){
+   let str="*";
+    for (let j=0;j<i;j++){
+     // let  str="*";
+     
     }
+    console.log(str.repeat(i));
 }
-arm();
