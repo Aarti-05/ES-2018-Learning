@@ -101,9 +101,14 @@
 // console.log(...arr);
 // console.log(another)
 const element=(n)=>{
-    let arr=[1,2,3,4,5,6,7,8,9];
-    for (let i=0;i<n;i++){
+    let arr=[1,2,3,4,5,6,7,8,12];
+    for (let i=0;i<=n;i++){
         console.log(arr[i]);
+        if(n==i)
+        {
+           
+            console.log(arr[i])
+        }
     }
 }
-element(2);
+element(5);
