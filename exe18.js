@@ -102,13 +102,13 @@
 // console.log(another)
 const element=(n)=>{
     let arr=[1,2,3,4,5,6,7,8,12];
-    for (let i=0;i<=n;i++){
+    for (let i=Math.floor(arr.length/2);i<=arr.length;i++){
         console.log(arr[i]);
-        if(n==i)
-        {
+        // if(n==i)
+        // {
            
-            console.log(arr[i])
-        }
+        //     console.log(arr[i])
+        // }
     }
 }
 element(5);
