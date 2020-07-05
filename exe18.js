@@ -65,11 +65,24 @@
 //     }
 // }
 // arm();
-for (let i=1;i<=5;i++){
-   let str="*";
-    for (let j=0;j<i;j++){
-     // let  str="*";
+// for (let i=1;i<=5;i++){
+//    let str="*";
+//     for (let j=0;j<i;j++){
+//      // let  str="*";
      
+//     }
+//     console.log(str.repeat(i));
+// }
+var a = 12; //First number
+var b = 50;  //Second number 
+let gcd;
+while(a!=b){
+    if(a>b){
+        a=a-b;
     }
-    console.log(str.repeat(i));
+    else{
+        b=b-a;
+    }
+    gcd=a;
 }
+console.log(gcd);
