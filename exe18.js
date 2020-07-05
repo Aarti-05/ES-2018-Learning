@@ -94,5 +94,16 @@
 // let arr=[-1,-2,5,-3];
 // let x=Math.max(...arr);
 // console.log(x);
-let arr=[1,2,3]
-console.log(Array.isArray(arr))
+//  let arr=[1,2,3]
+// console.log(Array.isArray(arr))
+// const another=Object.assign({},arr)
+// console.log(another)
+// console.log(...arr);
+// console.log(another)
+const element=(n)=>{
+    let arr=[1,2,3,4,5,6,7,8,9];
+    for (let i=0;i<n;i++){
+        console.log(arr[i]);
+    }
+}
+element(2);
