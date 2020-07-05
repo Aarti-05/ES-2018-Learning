@@ -73,16 +73,21 @@
 //     }
 //     console.log(str.repeat(i));
 // }
-var a = 12; //First number
-var b = 50;  //Second number 
-let gcd;
-while(a!=b){
-    if(a>b){
-        a=a-b;
+// var a = 12; //First number
+// var b = 50;  //Second number 
+// let gcd;
+// while(a!=b){
+//     if(a>b){
+//         a=a-b;
+//     }
+//     else{
+//         b=b-a;
+//     }
+//     gcd=a;
+// }
+// console.log(gcd);
+for (let i=1;i<1000;i++){
+    if(i%3==0 && i%5==0){
+        console.log(i);
     }
-    else{
-        b=b-a;
-    }
-    gcd=a;
 }
-console.log(gcd);
