@@ -86,8 +86,11 @@
 //     gcd=a;
 // }
 // console.log(gcd);
-for (let i=1;i<1000;i++){
-    if(i%3==0 && i%5==0){
-        console.log(i);
-    }
-}
+// for (let i=1;i<1000;i++){
+//     if(i%3==0 && i%5==0){
+//         console.log(i);
+//     }
+// }
+let arr=[-1,-2,5,-3];
+let x=Math.max(...arr);
+console.log(x);
