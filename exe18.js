@@ -112,6 +112,19 @@
 //     }
 // }
 // element(5);
-let myColor = ["Red", "Green", "White", "Black"];
-myColor=myColor.join('+')
-console.log(myColor);
+// let myColor = ["Red", "Green", "White", "Black"];
+// myColor=myColor.join('+')
+// console.log(myColor);
+const num=25468;
+let str=num.toString();
+let arr1=[];
+console.log(str);
+for (let i=0;i<str.length;i++){
+    if((str[i-1]%2===0) && (str[i]%2===0) ){
+    arr1.push("-",str[i])
+    }
+    else{
+        arr1.push(str[i])
+    }
+    console.log(arr1.join(''));
+}
