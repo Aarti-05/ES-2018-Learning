@@ -91,6 +91,8 @@
 //         console.log(i);
 //     }
 // }
-let arr=[-1,-2,5,-3];
-let x=Math.max(...arr);
-console.log(x);
+// let arr=[-1,-2,5,-3];
+// let x=Math.max(...arr);
+// console.log(x);
+let arr=[1,2,3]
+console.log(Array.isArray(arr))
