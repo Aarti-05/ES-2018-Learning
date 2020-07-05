@@ -100,15 +100,18 @@
 // console.log(another)
 // console.log(...arr);
 // console.log(another)
-const element=(n)=>{
-    let arr=[1,2,3,4,5,6,7,8,12];
-    for (let i=Math.floor(arr.length/2);i<=arr.length;i++){
-        console.log(arr[i]);
-        // if(n==i)
-        // {
+// const element=(n)=>{
+//     let arr=[1,2,3,4,5,6,7,8,12];
+//     for (let i=Math.floor(arr.length/2);i<=arr.length;i++){
+//         console.log(arr[i]);
+//         // if(n==i)
+//         // {
            
-        //     console.log(arr[i])
-        // }
-    }
-}
-element(5);
+//         //     console.log(arr[i])
+//         // }
+//     }
+// }
+// element(5);
+let myColor = ["Red", "Green", "White", "Black"];
+myColor=myColor.join('+')
+console.log(myColor);
