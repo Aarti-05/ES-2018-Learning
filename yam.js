@@ -90,7 +90,9 @@ var nestedData = {
   for (let key in nestedData.innerData.numberData.fibonnaci){
     console.log(nestedData.innerData.numberData.fibonnaci[key])
 }
-
+console.log(nestedData.innerData.order[1]);
+console.log(nestedData.innerData.addSnack("chocalate"));
+console.log(nestedData.innerData.snacks);
 
 
 
