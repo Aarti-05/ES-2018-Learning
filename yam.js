@@ -87,6 +87,9 @@ var nestedData = {
   for (let key in nestedData.innerData.numberData.primeNumbers){
       console.log(nestedData.innerData.numberData.primeNumbers[key])
   }
+  for (let key in nestedData.innerData.numberData.fibonnaci){
+    console.log(nestedData.innerData.numberData.fibonnaci[key])
+}
 
 
 
