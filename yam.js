@@ -139,16 +139,32 @@
 //   }
 // }
 
-let nestedArr = [[1, 2, 3], [4, 5, 6], [7, 8], [9, 10, 11, 12]];
-const printEven=()=>{
+// let nestedArr = [[1, 2, 3], [4, 5, 6], [7, 8], [9, 10, 11, 12]];
+// const printEven=()=>{
+//     for(let i=0;i<nestedArr.length;i++){
+//         //console.log(nestedArr.length)
+//         for (let j=0;j<nestedArr[i].length;j++){
+//             //console.log(nestedArr[i].length)
+//             if(nestedArr[i][j]%2===0){
+//                 console.log(nestedArr[i][j]);
+//             }
+//         }
+//     }
+// }
+// printEven();
+let nestedArr = [[1, 2], [3, 4], [5, 6]];
+//let nestedArr = [1, 2, 3, 4, 5, 6];
+const sum=()=>{
+    let add=0;
     for(let i=0;i<nestedArr.length;i++){
-        //console.log(nestedArr.length)
-        for (let j=0;j<nestedArr[i].length;j++){
-            //console.log(nestedArr[i].length)
-            if(nestedArr[i][j]%2===0){
-                console.log(nestedArr[i][j]);
-            }
-        }
-    }
+                //console.log(nestedArr.length)
+                for (let j=0;j<nestedArr[i].length;j++){
+                    //console.log(nestedArr[i].length)
+                 add+=nestedArr[i][j];
+                 
+
+                }
+                }
+                console.log(add);
 }
-printEven();
+sum();
