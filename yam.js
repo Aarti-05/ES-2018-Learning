@@ -123,20 +123,32 @@
 //   }
 //   addSpeaker(name,"RIAZ");
 //  console.log(nestedObject.speakers) 
-let myFirstSubarray = [["this", "is"], ["super", "cool"]];
-console.log(myFirstSubarray.length,myFirstSubarray[1])
+// let myFirstSubarray = [["this", "is"], ["super", "cool"]];
+// console.log(myFirstSubarray.length,myFirstSubarray[1])
 
 
-// myFirstSubarray.forEach((value,key)=>{
-//     console.log(value[0][1]);
-// })
-let nestedArr = [[1, 2], [3, 4]];
-for (let i = 0; i < nestedArr.length; i++) {
-  for (let j = 0; j < nestedArr[i].length; j++) {
-    // notice that we are going inside the outer array
-    // and now inside of the inner array
-    console.log(nestedArr[i][j]);
-  }
+// // myFirstSubarray.forEach((value,key)=>{
+// //     console.log(value[0][1]);
+// // })
+// let nestedArr = [[1, 2], [3, 4]];
+// for (let i = 0; i < nestedArr.length; i++) {
+//   for (let j = 0; j < nestedArr[i].length; j++) {
+//     // notice that we are going inside the outer array
+//     // and now inside of the inner array
+//     console.log(nestedArr[i][j]);
+//   }
+// }
+
+let nestedArr = [[1, 2, 3], [4, 5, 6], [7, 8], [9, 10, 11, 12]];
+const printEven=()=>{
+    for(let i=0;i<nestedArr.length;i++){
+        //console.log(nestedArr.length)
+        for (let j=0;j<nestedArr[i].length;j++){
+            //console.log(nestedArr[i].length)
+            if(nestedArr[i][j]%2===0){
+                console.log(nestedArr[i][j]);
+            }
+        }
+    }
 }
-
-
+printEven();
