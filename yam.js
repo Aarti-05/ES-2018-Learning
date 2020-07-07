@@ -93,39 +93,50 @@
 // console.log(nestedData.innerData.order[1]);
 // console.log(nestedData.innerData.addSnack("chocalate"));
 // console.log(nestedData.innerData.snacks);
-var nestedObject = {
-    speakers: [{name:"Elie"},{name:"Tim"},{name:"Matt"}],
-    data: {
-      continents: {
-        europe: {
-          countries: {
-            switzerland: {
-              capital: "Bern",
-              population: 8000000
-            }
-          }
-        }
-      },
-      languages: {
-        spanish: {
-            hello: "Hola"
-        },
-        french: {
-            hello: "Bonjour"
-        }
-      }
-    }
+// var nestedObject = {
+//     speakers: [{name:"Elie"},{name:"Tim"},{name:"Matt"}],
+//     data: {
+//       continents: {
+//         europe: {
+//           countries: {
+//             switzerland: {
+//               capital: "Bern",
+//               population: 8000000
+//             }
+//           }
+//         }
+//       },
+//       languages: {
+//         spanish: {
+//             hello: "Hola"
+//         },
+//         french: {
+//             hello: "Bonjour"
+//         }
+//       }
+//     }
+//   }
+//   const addSpeaker=(key,value)=>{
+//     //key:value;
+//       nestedObject.speakers.push({key:value});
+
+//   }
+//   addSpeaker(name,"RIAZ");
+//  console.log(nestedObject.speakers) 
+let myFirstSubarray = [["this", "is"], ["super", "cool"]];
+console.log(myFirstSubarray.length,myFirstSubarray[1])
+
+
+// myFirstSubarray.forEach((value,key)=>{
+//     console.log(value[0][1]);
+// })
+let nestedArr = [[1, 2], [3, 4]];
+for (let i = 0; i < nestedArr.length; i++) {
+  for (let j = 0; j < nestedArr[i].length; j++) {
+    // notice that we are going inside the outer array
+    // and now inside of the inner array
+    console.log(nestedArr[i][j]);
   }
-  const addSpeaker=(key,value)=>{
-    //key:value;
-      nestedObject.speakers.push({key:value});
-
-  }
-  addSpeaker(name,"RIAZ");
- console.log(nestedObject.speakers) 
-
-
-
-
+}
 
 
