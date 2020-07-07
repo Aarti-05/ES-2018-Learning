@@ -56,20 +56,20 @@ function displayCities(){
     }
 
 displayCities();
-// const homeTown=()=>{
-//     //for(let key in instructorData.additionalData.moreDetails.hometown){
-//       let cities=(instructorData.additionalData.moreDetails.hometown);
-//       for (let key in cities){
-//           console.log(cities[key])
-//       }
-//     }
+const homeTown=()=>{
+    //for(let key in instructorData.additionalData.moreDetails.hometown){
+      let cities=(instructorData.additionalData.moreDetails.hometown);
+      for (let key in cities){
+          console.log(cities[key])
+      }
+    }
 
-// homeTown();
-// const addDetails = (key,value)=>{
-//    instructorData[key]=value;
-// }
-// addDetails("isHillarious",true);
-// console.log(instructorData);
+homeTown();
+const addDetails = (key,value)=>{
+   instructorData[key]=value;
+}
+addDetails("isHillarious",true);
+console.log(instructorData);
 
 
 
