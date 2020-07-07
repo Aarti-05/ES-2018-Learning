@@ -115,16 +115,52 @@
 // let myColor = ["Red", "Green", "White", "Black"];
 // myColor=myColor.join('+')
 // console.log(myColor);
-const num=25468;
-let str=num.toString();
-let arr1=[];
-console.log(str);
-for (let i=0;i<str.length;i++){
-    if((str[i-1]%2===0) && (str[i]%2===0) ){
-    arr1.push("-",str[i])
-    }
-    else{
-        arr1.push(str[i])
-    }
-    console.log(arr1.join(''));
-}
+// const num=25468;
+// let str=num.toString();
+// let arr1=[];
+// console.log(str);
+// for (let i=0;i<str.length;i++){
+//     if((str[i-1]%2===0) && (str[i]%2===0) ){
+//     arr1.push("-",str[i])
+//     }
+//     else{
+//         arr1.push(str[i])
+//     }
+//     console.log(arr1.join(''));
+// }
+// let arr= [1,2,-3,5,-9,5,-8,4];
+// console.log(arr.sort());
+// let arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// let arr2=arr1.sort();
+// let temp;
+// console.log(arr2);
+// let count=0;
+// for (let i=1;i<arr1.length;i++){
+//     if(arr1[i]==arr[i-1]){
+//         count++;
+//         temp=arr1[i];
+//         console.log(temp,count);
+//     }
+//     else{
+//         count=0;
+//     }
+// }
+// var instructorData = {
+//     name: "Elie",
+//     additionalData: {
+//         instructor: true,
+//         favoriteHobbies: ["Playing Cello", "Tennis", "Coding"],
+//         moreDetails: {
+//             favoriteBasketballTeam: "New York Knicks",
+//             numberOfSiblings: 3,
+//             isYoungest: true,
+//             hometown: {
+//                 city: "West Orange",
+//                 state: "NJ",
+//             },
+//             citiesLivedIn: ["Seattle", "Providence", "New York"]
+//         }
+//     }
+// };
+
+// let x=
