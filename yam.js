@@ -161,7 +161,7 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //                 for (let j=0;j<nestedArr[i].length;j++){
 //                     //console.log(nestedArr[i].length)
 //                  add+=nestedArr[i][j];
-                 
+
 
 //                 }
 //                 }
@@ -172,10 +172,10 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //     var amount = num % arr.length;
 //     for (let i=0;i<amount;i++){
 //         arr=arr.unshift((arr.pop()));
-        
-        
+
+
 //     }
-    
+
 //     console.log(arr);
 
 
@@ -193,7 +193,7 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //          x=arr[i];
 //        callback(x);
 //     }
-    
+
 // }
 
 // let x;
@@ -209,20 +209,69 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 // clearTimeout(timerId);
 // },3000)
 //Write a function called countdown that accepts a number as a parameter and every 1000 milliseconds decrements the value and console.logs it. Once the value is 0 it should log "DONE!" and stop.//
-const countDown=(a)=>{
- 
-  let timerId=setInterval(()=>{
-    console.log(a);
-          a--;
-          if(a===0){
-            setTimeout(()=>{
-              clearInterval(timerId);
-            },1000) 
-          }
-          
-          
-  },1000);
+// const countDown=(a)=>{
 
-  
-}
-countDown(10);
+//   let timerId=setInterval(()=>{
+//     console.log(a);
+//           a--;
+//           if(a===0){
+//             setTimeout(()=>{
+//               clearInterval(timerId);
+//             },1000) 
+//           }
+
+
+//   },1000);
+
+
+// }
+// countDown(10);
+//Write a function called randomGame that selects a random number between 0 and 1 every 1000 milliseconds and each time that a random number is picked, add 1 to a counter. If the number is greater than .75, stop the timer and return the number of tries it took before we found a number greater than .75.
+// const randomGame=()=>{
+//   let counter=0;
+//  let timerId =setInterval(() => {
+//     let x=Math.random();
+//     console.log(x);
+//     counter++;
+//     console.log(counter)
+//     if(x>.75){
+//       setTimeout(() => {
+//       clearInterval(timerId);  
+//       }, 0);
+//     }
+//   }, 1000);
+// }
+// randomGame();
+//Write a function called isEven which takes in a number and returns true if the number is even and returns false if it is not
+// const isEven = (x) => {
+//   //let timerId = setInterval(()=>{
+//     //let x =parseInt(Math.random()) ;
+         
+//     if (x % 2 === 0) {
+//       //console.log(x)
+//       return true;
+//     }
+//     else {
+//       return false;
+//     }
+
+//   //}, 1000);
+// }
+// console.log(isEven(13));
+let animal={
+  introduce:function(){
+    return this.name+ " is a "+this.type+ " and sound is "+ this.sound;
+  }
+};
+let dog={
+  name:"whiskey",
+  type:"dog",
+  sound:"wooh"
+};
+let cat={
+  name:"moxie",
+  type:"cat",
+  sound:"meaw"
+};
+console.log(animal.introduce.call(dog));
+console.log(animal.introduce.call(cat));
