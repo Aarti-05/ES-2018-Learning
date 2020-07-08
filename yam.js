@@ -258,20 +258,31 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //   //}, 1000);
 // }
 // console.log(isEven(13));
-let animal={
-  introduce:function(){
-    return this.name+ " is a "+this.type+ " and sound is "+ this.sound;
-  }
-};
-let dog={
-  name:"whiskey",
-  type:"dog",
-  sound:"wooh"
-};
-let cat={
-  name:"moxie",
-  type:"cat",
-  sound:"meaw"
-};
-console.log(animal.introduce.call(dog));
-console.log(animal.introduce.call(cat));
+// let animal={
+//   introduce:function(){
+//     return this.name+ " is a "+this.type+ " and sound is "+ this.sound;
+//   }
+// };
+// let dog={
+//   name:"whiskey",
+//   type:"dog",
+//   sound:"wooh"
+// };
+// let cat={
+//   name:"moxie",
+//   type:"cat",
+//   sound:"meaw"
+// };
+// console.log(animal.introduce.call(dog));
+// console.log(animal.introduce.call(cat));
+function Vehicle(make,model,year){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+function Motorcycle(make,model,year,motorcycleType){
+  Vehicle.call(this,make,model,year)
+  this.motorcycleType = motorcycleType;
+}
+console.log(Motorcycle("honda",2020,"120cc","bajaj"))
