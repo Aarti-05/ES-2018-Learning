@@ -154,17 +154,57 @@
 // printEven();
 let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //let nestedArr = [1, 2, 3, 4, 5, 6];
-const sum=()=>{
-    let add=0;
-    for(let i=0;i<nestedArr.length;i++){
-                //console.log(nestedArr.length)
-                for (let j=0;j<nestedArr[i].length;j++){
-                    //console.log(nestedArr[i].length)
-                 add+=nestedArr[i][j];
+// const sum=()=>{
+//     let add=0;
+//     for(let i=0;i<nestedArr.length;i++){
+//                 //console.log(nestedArr.length)
+//                 for (let j=0;j<nestedArr[i].length;j++){
+//                     //console.log(nestedArr[i].length)
+//                  add+=nestedArr[i][j];
                  
 
-                }
-                }
-                console.log(add);
-}
-sum();
+//                 }
+//                 }
+//                 console.log(add);
+// }
+// sum();
+// const rotate=(arr,num)=>{
+//     var amount = num % arr.length;
+//     for (let i=0;i<amount;i++){
+//         arr=arr.unshift((arr.pop()));
+        
+        
+//     }
+    
+//     console.log(arr);
+
+
+// rotate([1,2,3],);
+// function rotate(arr, num){
+//     var amount = num % arr.length;
+//     for(var i=0; i< amount; i++){
+//       arr.unshift(arr.pop());
+//     }
+//     return arr;
+// }
+// rotate([1,2,3,4],2)
+// function each (arr,callback){
+//     for (let i=0;i<arr.length;i++){
+//          x=arr[i];
+//        callback(x);
+//     }
+    
+// }
+
+// let x;
+// function mul (){
+//     console.log(x*2) ;}
+//     (each([1,2,3,4],mul));
+
+let timerId=setInterval(function(){
+  console.log("hello");
+},1000)
+
+setTimeout(function(){
+clearTimeout(timerId);
+},3000)
