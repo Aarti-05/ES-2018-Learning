@@ -201,10 +201,28 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //     console.log(x*2) ;}
 //     (each([1,2,3,4],mul));
 
-let timerId=setInterval(function(){
-  console.log("hello");
-},1000)
+// let timerId=setInterval(function(){
+//   console.log("hello");
+// },1000)
 
-setTimeout(function(){
-clearTimeout(timerId);
-},3000)
+// setTimeout(function(){
+// clearTimeout(timerId);
+// },3000)
+//Write a function called countdown that accepts a number as a parameter and every 1000 milliseconds decrements the value and console.logs it. Once the value is 0 it should log "DONE!" and stop.//
+const countDown=(a)=>{
+ 
+  let timerId=setInterval(()=>{
+    console.log(a);
+          a--;
+          if(a===0){
+            setTimeout(()=>{
+              clearInterval(timerId);
+            },1000) 
+          }
+          
+          
+  },1000);
+
+  
+}
+countDown(10);
