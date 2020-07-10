@@ -373,17 +373,30 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 // console.log(arr.sort());
 
 //hour>=12? hour-12:hour;
-const updateClock=()=>{
-  setInterval(()=>{
-    let today=new Date();
-    let hour=today.getHours();
-    hour=(hour>12)?hour-12:hour;
-    let min=today.getMinutes();
-    min=(min<10)?"0"+min:min
-    let sec=today.getSeconds()
-    sec=(sec<10)?"0"+sec:sec
-     console.log(hour+":"+min+":"+sec) ;
-  },1000);
+// const updateClock=()=>{
+//   setInterval(()=>{
+//     let today=new Date();
+//     let hour=today.getHours();
+//     hour=(hour>12)?hour-12:hour;
+//     let min=today.getMinutes();
+//     min=(min<10)?"0"+min:min
+//     let sec=today.getSeconds()
+//     sec=(sec<10)?"0"+sec:sec
+//      console.log(hour+":"+min+":"+sec) ;
+//   },1000);
+// }
+// (updateClock());
+let str="real";
+let arr=[];
+for (let i=0; i<str.length;i++){
+  for (let j=1+i;j<str.length+1;j++){
+     let str2=(str.slice(i,j));
+   arr.push(str2);
+    
+  }
+  
 }
-(updateClock());
+console.log(arr);
+
+//console.log(key)
 
