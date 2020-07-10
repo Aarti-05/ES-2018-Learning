@@ -316,9 +316,20 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
   
 // }
 // console.log(count)
-let a=20;
-let b=13;
-let diff;
-if (a>b){
-  console.log((a-b)*(a-b));
+// let a=20;
+// let b=13;
+// let diff;
+// if (a>b){
+//   console.log((a-b)*(a-b));
+// }
+const sum=(a,b)=>{
+if(a===b){
+  return (a+b)*3;
 }
+else{
+  return a+b;
+}
+}
+console.log(sum(13,13));
+console.log(sum(12,15));
+
