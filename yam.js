@@ -322,14 +322,19 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 // if (a>b){
 //   console.log((a-b)*(a-b));
 // }
-const sum=(a,b)=>{
-if(a===b){
-  return (a+b)*3;
+// const sum=(a,b)=>{
+// if(a===b){
+//   return (a+b)*3;
+// }
+// else{
+//   return a+b;
+// }
+// }
+// console.log(sum(13,13));
+// console.log(sum(12,15));
+function num(a,b){
+  if(a===50||b===50||(a+b)===50){
+    return true;
+  }
 }
-else{
-  return a+b;
-}
-}
-console.log(sum(13,13));
-console.log(sum(12,15));
-
+console.log(num(12,38))
