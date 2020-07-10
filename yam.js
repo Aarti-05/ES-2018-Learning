@@ -275,14 +275,50 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 // };
 // console.log(animal.introduce.call(dog));
 // console.log(animal.introduce.call(cat));
-function Vehicle(make,model,year){
-  this.make = make;
-  this.model = model;
-  this.year = year;
-}
+// function Vehicle(make,model,year){
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
+// }
 
-function Motorcycle(make,model,year,motorcycleType){
-  Vehicle.call(this,make,model,year)
-  this.motorcycleType = motorcycleType;
+// function Motorcycle(make,model,year,motorcycleType){
+//   Vehicle.call(this,make,model,year)
+//   this.motorcycleType = motorcycleType;
+// }
+//  rest operator///
+// function fun(a,b,...c){
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// }
+// fun(1,2,3,4,5,6,7,8,9,0);
+// function sum(x, y, z) {
+//   return z;
+// }
+
+// const numbers = [1, 2, 3];
+
+// console.log(sum(...numbers));
+// var match1 = "cookiessssssssss".match(/cookies+/) // ["cookiessssssssss"]
+// var match2 = "cookies".match(/cookies+/) // ['cookies']
+// var match3 = "cookie".match(/cookies+/) // null
+// console.log(match1);
+// let reg=new RegExp(/[0-9]/g);
+// let x="123459";
+// let count=0;
+// for (let i=0;i<x.length;x++)
+// {
+//   let result=reg.test(x);
+//   if(result){
+//     count++;
+
+//   }
+  
+// }
+// console.log(count)
+let a=20;
+let b=13;
+let diff;
+if (a>b){
+  console.log((a-b)*(a-b));
 }
-console.log(Motorcycle("honda",2020,"120cc","bajaj"))
