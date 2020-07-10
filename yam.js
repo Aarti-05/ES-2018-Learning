@@ -332,9 +332,58 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 // }
 // console.log(sum(13,13));
 // console.log(sum(12,15));
-function num(a,b){
-  if(a===50||b===50||(a+b)===50){
-    return true;
-  }
+// function num(a,b){
+//   if(a===50||b===50||(a+b)===50){
+//     return true;
+//   }
+// }
+// console.log(num(12,38))
+// let library = [ 
+//   {
+//       author: 'Bill Gates',
+//       title: 'The Road Ahead',
+//       readingStatus: true
+//   },
+//   {
+//       author: 'Steve Jobs',
+//       title: 'Walter Isaacson',
+//       readingStatus: true
+//   },
+//   {
+//       author: 'Suzanne Collins',
+//       title:  'Mockingjay: The Final Book of The Hunger Games', 
+//       readingStatus: false
+//   }];
+//   for (let key of library){
+   
+    
+//       if(key["readingStatus"]){
+//         console.log(`you have alraedy finished ${key["title"]} by ${key["author"]}`)
+//       }
+//       else{
+//         console.log(`You still need to read ${key["title"]} by ${key["author"]}`)
+//       }
+   
+// const volume=(radius,height)=>{
+//   let v= Math.PI*(radius*radius*height);
+//   return v.toFixed(3);
+// }
+//   console.log(volume(5,10));
+// let arr=[6,4,3,-2,0,1];
+// console.log(arr.sort());
+
+//hour>=12? hour-12:hour;
+const updateClock=()=>{
+  setInterval(()=>{
+    let today=new Date();
+    let hour=today.getHours();
+    hour=(hour>12)?hour-12:hour;
+    let min=today.getMinutes();
+    min=(min<10)?"0"+min:min
+    let sec=today.getSeconds()
+    sec=(sec<10)?"0"+sec:sec
+     console.log(hour+":"+min+":"+sec) ;
+  },1000);
 }
-console.log(num(12,38))
+(updateClock());
+
