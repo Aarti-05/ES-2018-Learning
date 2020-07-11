@@ -386,17 +386,17 @@ let nestedArr = [[1, 2], [3, 4], [5, 6]];
 //   },1000);
 // }
 // (updateClock());
-let str="real";
-let arr=[];
-for (let i=0; i<str.length;i++){
-  for (let j=1+i;j<str.length+1;j++){
-     let str2=(str.slice(i,j));
-   arr.push(str2);
+// let str="real";
+// let arr=[];
+// for (let i=0; i<str.length;i++){
+//   for (let j=1+i;j<str.length+1;j++){
+//      let str2=(str.slice(i,j));
+//    arr.push(str2);
     
-  }
+//   }
   
-}
-console.log(arr);
+// }
+// console.log(arr);
 
 //console.log(key)
 
