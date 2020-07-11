@@ -13,10 +13,11 @@ const getStockSymbol=(arr)=>{
 // })
 
 // return stocks;
-return arr.filter((value)=>{
-    return value.price>200;
-})
+// return arr.filter((value)=>{
+//     return value.price>200;
+// })
 
+//return stock;
 }
 let arr=[
     {
@@ -30,3 +31,16 @@ let arr=[
     }
 ];
 console.log(getStockSymbol(arr));
+//let stock;
+let stock=arr.filter((value)=>{
+if(value.price>200){
+    return value.price;
+};
+}).map((value)=>{
+    return value.symbols;
+});
+console.log(stock)
+stock.forEach((value)=>{
+
+    console.log(stock)
+})
