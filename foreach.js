@@ -3,9 +3,18 @@ const getStockSymbol=(arr)=>{
 // arr.forEach((value,key)=>{
 // stocks.push(value.price);
 //})
-return arr.map((value)=>{
-        return value.symbols;
+// return arr.map((value)=>{
+//         return value.symbols;
 
+// })
+// arr.forEach((value)=>{
+//     if (value.price>=200)
+//     stocks.push(value.price)
+// })
+
+// return stocks;
+return arr.filter((value)=>{
+    return value.price>200;
 })
 
 }
