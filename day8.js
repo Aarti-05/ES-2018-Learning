@@ -66,9 +66,21 @@ let entities=[
     {number:40}
 ]
 
-let total=entities.reduce((acc=0,current)=>{
+let total=entities.reduce((acc,current)=>{
    
 const num=current.number;
 return acc+num;    
-})
+},0)
 console.log(total)
+
+/************************************merging  arrays*****************************************8 */
+const arr1=[[3,5],[8,9],[2,6]]
+const arr2=arr1.reduce((acc,current)=>{
+    acc.concat(current)
+     
+     return acc;
+     
+ 
+},[])
+console.log(arr2)
+
