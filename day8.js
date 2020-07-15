@@ -76,11 +76,18 @@ console.log(total)
 /************************************merging  arrays*****************************************8 */
 const arr1=[[3,5],[8,9],[2,6]]
 const arr2=arr1.reduce((acc,current)=>{
-    acc.concat(current)
-     
-     return acc;
-     
- 
-},[])
+     return acc.concat(current)
+     },[])
 console.log(arr2)
 
+//***********************longest array********************************** */
+const arr3=[
+    [1,2,3],
+    [2,5,8,9,6,1],
+    [2,3,5,6,7,,1,2,6,8,8,9,77,45]
+
+]
+const longest=arr3.reduce((acc,current)=>{
+    return acc.length>current.length?acc:current
+})
+console.log(longest)
