@@ -19,9 +19,20 @@ const person={
     name:"jia",
     age:25
 }
-function displayName(name)
+function displayName()
 {
-    return this.name
+    return this.name;
 }
-const a =displayName.call(person,null);
-console.log(a);
+const name =displayName.call(person,null);
+console.log(name);
+/**********************higher order functions************************ */
+const arr=[11,22,1,2,7,8,88]/////[11,22,1,2,7,8,88]
+const sorting=(n,m)=>{
+    console.log(m,n)
+    console.log(m-n);
+    return n-m;
+    
+}
+
+console.log(arr.sort(sorting))
+console.log([11,1,2,22].sort())
