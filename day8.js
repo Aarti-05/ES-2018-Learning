@@ -11,3 +11,17 @@ function multiply(x,y){
 }
 const z=multiply.call(null,45,2,3);///function invocation using call method//////
 console.log(z)
+const z1= multiply.bind(null,32,6);
+console.log(z1()); ///function invocation using bind which returns a function //////
+
+//****************functions are objects***********************/
+const person={
+    name:"jia",
+    age:25
+}
+function displayName(name)
+{
+    return this.name
+}
+const a =displayName.call(person,null);
+console.log(a);
