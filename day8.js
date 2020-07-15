@@ -91,3 +91,24 @@ const longest=arr3.reduce((acc,current)=>{
     return acc.length>current.length?acc:current
 })
 console.log(longest)
+
+/***************************converting array into objects*****************************************8 */
+let persons=[
+    {id:1, name:"John",born:1970},
+    {id:2, name:"Jiya",born:1975},
+    {id:3, name:"Jonny",born:1980},
+    {id:4, name:"Jordy",born:1960},
+    {id:5, name:"mosh",born:1980},
+    {id:6, name:"Rian",born:1990}
+]
+const arr4=persons.reduce((acc,cur)=>{
+    let id=cur.id;
+    if(!acc.id){
+        acc.id= ""+cur.id;
+    }
+    acc[id]={id:cur.id,name:cur.name,born:cur.born}
+    return acc;
+    console.log(id)
+    console.log(acc)
+},{})
+console.log(arr4)
