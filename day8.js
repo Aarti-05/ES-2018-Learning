@@ -27,7 +27,7 @@ const name =displayName.call(person,null);
 console.log(name);
 /**********************higher order functions************************ */
 const arr=[11,22,1,2,7,8,88]/////[11,22,1,2,7,8,88]
-const sorting=(n,m)=>{
+const sorting=(m,n)=>{
     console.log(m,n)
     console.log(m-n);
     return n-m;
@@ -36,3 +36,31 @@ const sorting=(n,m)=>{
 
 console.log(arr.sort(sorting))
 console.log([11,1,2,22].sort())
+
+/***********************filter in functional programming********************************8 */
+const people=[
+{    name:"John",age: 25  },    
+{    name:"Mark",age: 45 }    ,
+{    name:"Thomas",age: 65  },    
+{    name:"Mosh",age: 90  }   , 
+{    name:"Ria",age: 52 }    ,
+{    name:"Jonny",age: 95  }    
+    
+]
+const filter=people.filter((value)=>{
+    return value.age>55
+})
+console.log(filter)
+
+/************************** mapping in functional programming********************************8 */
+const people=[
+    {    name:"John",age: 25  },    
+    {    name:"Mark",age: 45 }    ,
+    {    name:"Thomas",age: 65  },    
+    {    name:"Mosh",age: 90  }   , 
+    {    name:"Ria",age: 52 }    ,
+    {    name:"Jonny",age: 95  }    
+        
+    ]
+    const mapped=people.map(value=>value.name)
+    console.log(mapped);
