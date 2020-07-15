@@ -102,9 +102,6 @@ let persons=[
     {id:6, name:"Rian",born:1990}
 ]
 const arr4=persons.reduce((acc,cur)=>{
-    
     return {...acc,[cur.id]:cur}
-    
 },{})
 console.log(arr4)
-console.log(arr4[2])
