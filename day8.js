@@ -53,14 +53,22 @@ const filter=people.filter((value)=>{
 console.log(filter)
 
 /************************** mapping in functional programming********************************8 */
-const people=[
-    {    name:"John",age: 25  },    
-    {    name:"Mark",age: 45 }    ,
-    {    name:"Thomas",age: 65  },    
-    {    name:"Mosh",age: 90  }   , 
-    {    name:"Ria",age: 52 }    ,
-    {    name:"Jonny",age: 95  }    
-        
-    ]
+
     const mapped=people.map(value=>value.name)
     console.log(mapped);
+let array=[25,56,23,29];
+console.log(array.map(value=>value+1))
+
+/****************adding numbers from obects************************************8 */
+let entities=[   
+     {number:10},
+    {number:30},
+    {number:40}
+]
+
+let total=entities.reduce((acc=0,current)=>{
+   
+const num=current.number;
+return acc+num;    
+})
+console.log(total)
