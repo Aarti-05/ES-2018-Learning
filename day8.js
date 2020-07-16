@@ -132,7 +132,12 @@ const result=compose(
     isVowel,    
     upper
 )
-console.log(result("I love mu country India"))
+console.log(result("I love my country India"))
+
+/****************************removing duplicates from array using filter****************************** */
+const array1=["a","b","c","a","b","d","e"]
+const array2=array1.filter((value,index)=>array1.lastIndexOf(value)===index)
+console.log(array2)
 
 
 
