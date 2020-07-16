@@ -120,3 +120,21 @@ const arr7=arr5.reduce((acc,cur)=>{
     })
 console.log(arr6)
 console.log(arr7)
+
+/******************composition in functional programming checking all the vowels in the string************************* */
+const upper=str=>str.toUpperCase();
+const isVowel=(str)=>str.match(/[AEIOU]/gi)
+
+const compose=(...fns)=>x=>
+fns.reduceRight((acc,fn)=>fn(acc),x);
+const result=compose(
+    
+    isVowel,    
+    upper
+)
+console.log(result("I love mu country India"))
+
+
+
+
+
