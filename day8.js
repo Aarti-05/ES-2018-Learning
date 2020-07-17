@@ -152,15 +152,15 @@ const palindrome=(str)=>{
 console.log(palindrome("rotor"))
 /***************************anagram check******************************************* */
 const anagram=(str1,str2)=>{
-    const result=string=>
-        string.toLowerCase().split('').filter((val)=>val.match(/\S/)).sort().join('');
+    const result=string=>{
+      return  string.toLowerCase().split('').filter((val)=>val.match(/\S/)).sort().join('');
         console.log(result(str1)===result(str2))
-       
+    }
     
     return result(str1)===result(str2)
     
 }
-console.log(anagram("astronomer","moon starer"))
+console.log(anagram("astronomer","test"))
 
 /******************************capitalizing string function**************************************** */
 const func=str3=>{
@@ -178,9 +178,17 @@ console.log(result1)
 /***************************flatten array using recursive function******************************* */
 const arr9=[[1,2],[3],[4,[5]],[9]];
 const result2=arr9=>{
-     return arr9.reduce((acc,cur)=>
-    Array.isArray(cur)?[...acc,...result2(cur)]:[...acc,cur]
+      return arr9.reduce((acc,cur)=>
+      Array.isArray(cur)?[...acc,...result2(cur)]:[...acc,cur]
     
-,[])
+      ,[])
 }
 console.log(result2(arr9));
+
+/************************************reverse integer function**************************************** */
+const int=-12356;
+const reverse=(int=>{
+    const f=int.toString().split('').reverse().join("");
+    return parseInt(f)* Math.sign(int);
+})
+console.log(reverse(int))
