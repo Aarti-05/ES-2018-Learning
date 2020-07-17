@@ -138,8 +138,16 @@ console.log(result("I love my country India"))
 const array1=["a","b","c","a","b","d","e"]
 const array2=array1.filter((value,index)=>array1.lastIndexOf(value)===index)
 console.log(array2)
+const array3=array1.reduce((acc,cur)=>acc.includes(cur)?acc:[...acc,cur],[])
 
+console.log(array3)
+const set=new Set(array1)
+console.log([...set])
 
-
-
+/***************************palindrome check****************************** */
+const palindrome=(str)=>{
+   const reverse= str.toLowerCase().split('').reverse().join('');
+    return reverse===str?true:false;
+}
+console.log(palindrome("test"))
 
