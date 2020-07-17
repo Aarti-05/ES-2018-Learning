@@ -149,5 +149,15 @@ const palindrome=(str)=>{
    const reverse= str.toLowerCase().split('').reverse().join('');
     return reverse===str?true:false;
 }
-console.log(palindrome("test"))
-
+console.log(palindrome("rotor"))
+/***************************anagram check******************************************* */
+const anagram=(str1,str2)=>{
+    const result=string=>
+        string.toLowerCase().split('').filter((val)=>val.match(/\S/)).sort().join('');
+        console.log(result(str1)===result(str2))
+       
+    
+    return result(str1)===result(str2)
+    
+}
+console.log(anagram("astronomer","moon starer"))
