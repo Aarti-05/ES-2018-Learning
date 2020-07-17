@@ -36,6 +36,20 @@ function Programmer(name,salary,language){
     Employee.call(this,name,salary);
     this.language=language;
 }
-Programmer.prototype=Object.create(Employee);
+Programmer.prototype=Object.create(Employee.prototype);/**************prototype inheritance from previous object to use functions *********** */
 const emp2=new Programmer("Ria",140000,"JavaScript")
 console.log(emp2.slogan())
+
+//***********************class************************************** */
+class Vehicle{
+    constructor(name,model,engine){
+        this.name=name;
+        this.model=model;
+        this.engine=engine;
+    }
+getResult(){
+    return (`best vehicle ever`)
+}
+}
+const v1=new Vehicle("honda",2000,"120cc")
+console.log(v1.getResult())
