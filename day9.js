@@ -17,5 +17,25 @@ function Person(firstName,lastName){
     this.lastName=lastName;
 }
 const person1=new Person("Ria","Mehra");
+const person2=Object.create(Person);
+person2.firstName="tia";
+person2.lastName="khan";
+console.log(`${person2.firstName} ${person2.lastName}`)
 console.log(`${person1.firstName} ${person1.lastName}`)
-console.log(Object.keys(person1.length))
+//***************************object prototype inheritance*************************************** */
+function Employee(name,salary){
+    this.name=name;
+    this.salary=salary;
+}
+Employee.prototype.slogan=function(){
+    return (`This company is best`)
+}
+const emp1=new Employee("Rahul",15000)
+console.log(emp1.slogan())
+function Programmer(name,salary,language){
+    Employee.call(this,name,salary);
+    this.language=language;
+}
+Programmer.prototype=Object.create(Employee);
+const emp2=new Programmer("Ria",140000,"JavaScript")
+console.log(emp2.slogan())
