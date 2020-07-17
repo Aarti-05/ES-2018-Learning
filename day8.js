@@ -168,3 +168,19 @@ const func=str3=>{
     return result;
 }
 console.log(func("the quick"))
+
+/***************************flatten array******************************* */
+const arr8=[[1,2],[3],[4,5],[9]];
+const result1=arr8.reduce((acc,cur)=>{
+    return acc.concat(cur);
+},[])
+console.log(result1)
+/***************************flatten array using recursive function******************************* */
+const arr9=[[1,2],[3],[4,[5]],[9]];
+const result2=arr9=>{
+     return arr9.reduce((acc,cur)=>
+    Array.isArray(cur)?[...acc,...result2(cur)]:[...acc,cur]
+    
+,[])
+}
+console.log(result2(arr9));
