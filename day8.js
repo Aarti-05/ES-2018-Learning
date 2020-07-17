@@ -161,3 +161,10 @@ const anagram=(str1,str2)=>{
     
 }
 console.log(anagram("astronomer","moon starer"))
+
+/******************************capitalizing string function**************************************** */
+const func=str3=>{
+    const result=str3.split(' ').map(v=>v[0].toUpperCase() + v.slice(1)).join(' ')
+    return result;
+}
+console.log(func("the quick"))
