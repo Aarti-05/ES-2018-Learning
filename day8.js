@@ -188,7 +188,7 @@ console.log(result2(arr9));
 /************************************reverse integer function**************************************** */
 const int=-12356;
 const reverse=(int=>{
-    const f=int.toString().split('').reverse().join("");
+    const f=int.toString().split('').reverse().join(" ");
     return parseInt(f)* Math.sign(int);
 })
 console.log(reverse(int))
