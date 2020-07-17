@@ -9,6 +9,7 @@ getfunction:()=>console.log(`${first_name} ${last_name}`), /******method in obje
 }
 person["first_name"]="tia"
 console.log(person.phoneNumber.phone_no)
+console.log(Object.keys(person).length)
 
 ///********************onject creation using constructor**************************** */
 function Person(firstName,lastName){
@@ -17,3 +18,4 @@ function Person(firstName,lastName){
 }
 const person1=new Person("Ria","Mehra");
 console.log(`${person1.firstName} ${person1.lastName}`)
+console.log(Object.keys(person1.length))
