@@ -69,9 +69,7 @@ console.log(car1.getResult())
 
 /**********************encapsulation************************** */
 class Emp {
-    
-
-setEmpDetails(name,salary){
+    setEmpDetails(name,salary){
     this.name=name;
     this.salary=salary;
 }
@@ -86,3 +84,16 @@ const emp3=new Emp()
 console.log(emp3.setEmpDetails("JOHN",200000));
 console.log(emp3.getEmpName())
 console.log(emp3.getEmpSalary())
+
+/*****************polymorphism******************* */
+class Car1 extends Vehicle {
+    constructor(name,model,cost){
+        super(name,model)
+        this.cost=cost;}
+        getResult(){
+            return (`best carrrr ever`)
+        }
+    
+    }
+    let car2=new Car1()
+    console.log(car2.getResult())
