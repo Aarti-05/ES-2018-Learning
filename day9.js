@@ -66,3 +66,23 @@ class Car extends Vehicle {
 const car1=new Car("verna",2016,6000000)
 console.log(car1)
 console.log(car1.getResult())
+
+/**********************encapsulation************************** */
+class Emp {
+    
+
+setEmpDetails(name,salary){
+    this.name=name;
+    this.salary=salary;
+}
+getEmpName(){
+    return (this.name);
+    
+}
+getEmpSalary(){
+    return this.salary;
+}}
+const emp3=new Emp()
+console.log(emp3.setEmpDetails("JOHN",200000));
+console.log(emp3.getEmpName())
+console.log(emp3.getEmpSalary())
