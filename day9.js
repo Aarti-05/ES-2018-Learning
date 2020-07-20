@@ -97,3 +97,20 @@ class Car1 extends Vehicle {
     }
     let car2=new Car1()
     console.log(car2.getResult())
+ ////********************************Abstraction********************************* */
+ function Emp2(name,salary){
+     this.name=name;
+     this.salary=salary;
+     let monthlyBonus=1000;
+let finalSalary=function(){
+    return salary+monthlyBonus;
+}
+this.getDetails=function(){
+  
+       finalSalary();
+       return (this.name+finalSalary())
+}
+}
+const emp4=new Emp2("rahul",2000);
+console.log(emp4.getDetails())
+ 
