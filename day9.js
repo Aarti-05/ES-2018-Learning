@@ -53,3 +53,16 @@ getResult(){
 }
 const v1=new Vehicle("honda",2000,"120cc")
 console.log(v1.getResult())
+
+/******************************************************************** */
+class Car extends Vehicle {
+    constructor(name,model,cost){
+        super(name,model)
+        this.cost=cost;
+    }
+
+
+}
+const car1=new Car("verna",2016,6000000)
+console.log(car1)
+console.log(car1.getResult())
