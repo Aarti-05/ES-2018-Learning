@@ -79,7 +79,9 @@ getEmpName(){
 }
 getEmpSalary(){
     return this.salary;
-}}
+}
+
+}
 const emp3=new Emp()
 console.log(emp3.setEmpDetails("JOHN",200000));
 console.log(emp3.getEmpName())
