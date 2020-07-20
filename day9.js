@@ -101,7 +101,7 @@ class Car1 extends Vehicle {
  function Emp2(name,salary){
      this.name=name;
      this.salary=salary;
-     let monthlyBonus=1000;
+     let monthlyBonus=1000;// *********its not a property/////
 let finalSalary=function(){
     return salary+monthlyBonus;
 }
@@ -110,7 +110,17 @@ this.getDetails=function(){
        finalSalary();
        return (this.name+finalSalary())
 }
+Object.defineProperty(this,'monthlyBonus',{/////*******to access any private property like other property */
+    get:function(){                //******************* get is used to read the property*********************** */
+        return monthlyBonus;
+    },
+    set:function(value){  /************* to assign or modify the property*********** */
+        monthlyBonus=value;
+    }
+})
 }
 const emp4=new Emp2("rahul",2000);
 console.log(emp4.getDetails())
+emp4.monthlyBonus=2000;
+console.log(emp4.monthlyBonus)
  
