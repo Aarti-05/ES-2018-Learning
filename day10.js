@@ -163,3 +163,23 @@ function fact(num){
     return product;
 }
 console.log(fact(10));
+/*****************************************base conversion using stack****************************************** */
+function conversion(num,base){
+let s2=new Stack();
+let converted=[]
+do{
+    s2.push(num%base);
+    num=Math.floor(num/base);
+}while(num>0)
+console.log(s2.length())
+
+while(s2.length()>0){
+converted+=s2.pop()
+}
+return converted;
+console.log(s2.length())
+}
+console.log(conversion(32,2));
+console.log(conversion(32,8));
+console.log(conversion(32,16));
+console.log(conversion(125,8));
