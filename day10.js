@@ -75,11 +75,11 @@ console.log(factorial(5))
 console.log("first")
 /************************datstructure stack using array as stack********************************** */
 let letters=[];
-let word="Bob";
+let word="BoB".toLowerCase();
 let rword="";
 for (let i=0;i<word.length;i++){
     
-    letters.push(word[i].toLowerCase());
+    letters.push(word[i]);
     
 }
 //letters=letters.join('')
@@ -96,3 +96,41 @@ if (rword===word){
 else{
     console.log("not a palindrome")
 }
+/*********************stack***************************** */
+function Stack(){
+    this.storage=[];
+    this.top=0;
+    this.push=push;
+    this.peek=peek;
+    this.pop=pop;
+    this.length=length;
+    this.clear=clear;
+}
+function push(value){
+    this.storage[this.top++]=value;
+}
+function pop(){
+    return this.storage[--this.top];
+}
+function peek(){
+  return  this.storage[this.top-1];
+}
+function length(){
+    return this.top;
+}
+function clear(){
+    this.top=0;
+}
+let s=new Stack()
+s.push("a");
+s.push("b");
+s.push("c");
+s.push("d");
+
+console.log(s.length());
+console.log(s.peek());
+console.log(s.length())
+console.log(s.pop())
+console.log(s.length())
+s.clear();
+console.log(s.length())
