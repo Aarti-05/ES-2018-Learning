@@ -121,16 +121,31 @@ function length(){
 function clear(){
     this.top=0;
 }
-let s=new Stack()
-s.push("a");
-s.push("b");
-s.push("c");
-s.push("d");
 
-console.log(s.length());
-console.log(s.peek());
-console.log(s.length())
-console.log(s.pop())
-console.log(s.length())
-s.clear();
-console.log(s.length())
+
+/******************************palindrome datastructure***************************** */
+function isPalindrome(str){
+    let s=new Stack()
+    let reword="";
+    console.log(s.length())
+    for (let r=0;r<str.length;r++){
+        s.push(str[r]);
+        
+        }
+        console.log(s.length())
+
+        for (let k=0;k<str.length;k++){
+            reword+=s.pop();
+        }
+        console.log(s.length())
+        console.log(reword)
+        if(reword==str){
+            console.log("palindrome")
+        }
+        
+     else{
+     return false
+    }
+    
+}
+console.log(isPalindrome("rotor"))
