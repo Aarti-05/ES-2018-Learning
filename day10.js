@@ -98,7 +98,7 @@ else{
 }
 /*********************stack***************************** */
 function Stack(){
-    this.storage=[];
+    this.collection=[];
     this.top=0;
     this.push=push;
     this.peek=peek;
@@ -107,13 +107,13 @@ function Stack(){
     this.clear=clear;
 }
 function push(value){
-    this.storage[this.top++]=value;
+    this.collection[this.top++]=value;
 }
 function pop(){
-    return this.storage[--this.top];
+    return this.collection[--this.top];
 }
 function peek(){
-  return  this.storage[this.top-1];
+  return  this.collection[this.top-1];
 }
 function length(){
     return this.top;
@@ -183,3 +183,54 @@ console.log(conversion(32,2));
 console.log(conversion(32,8));
 console.log(conversion(32,16));
 console.log(conversion(125,8));
+/********************************************queue in datastructure**************************************************** */
+function Queue(){
+     collection=[];
+    this.print=function(){
+        console.log(collection);
+    }
+    this.enqueue=function(vals){
+        collection.push(vals);
+    }
+    this.dequeue=function(){
+        return collection.shift();
+    }
+    this.front=function(){
+        return collection[0];
+    }
+this.back=function(){
+    return collection[collection.length-1];
+}
+this.toString=function(){
+    let str="";
+    for (let i=0;i<collection.length;i++){
+        str+=collection[i]
+    }
+    return str;
+}
+this.empty=function(){
+    if(collection.length===0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+}
+let q=new Queue();
+q.enqueue("a");
+q.enqueue("b");
+q.enqueue("c");
+q.enqueue("d");
+q.print();
+console.log(q.dequeue());
+(q.print());
+console.log(q.front())
+console.log(q.back());
+console.log(q.toString());
+q.empty();
+console.log(q.dequeue());
+console.log(q.dequeue());
+console.log(q.dequeue());
+console.log(q.dequeue());
+console.log(q.empty())
