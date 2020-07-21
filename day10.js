@@ -149,3 +149,17 @@ function isPalindrome(str){
     
 }
 console.log(isPalindrome("rotor"))
+/*****************************************factorial of number***************************************8 */
+function fact(num){
+    let s1=new Stack();
+    let product=1;
+    console.log(s1.length())
+    while(num>1){
+        s1.push(num--)
+    }
+    while(s1.length()>0){
+        product*=s1.pop()
+    }
+    return product;
+}
+console.log(fact(10));
