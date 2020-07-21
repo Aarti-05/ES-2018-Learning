@@ -187,7 +187,7 @@ console.log(conversion(125,8));
 function Queue(){
      collection=[];
     this.print=function(){
-        console.log(collection);
+       console.log(collection);
     }
     this.enqueue=function(vals){
         collection.push(vals);
@@ -234,3 +234,32 @@ console.log(q.dequeue());
 console.log(q.dequeue());
 console.log(q.dequeue());
 console.log(q.empty())
+/************************************************priority queue******************************************** */
+function Queue1(){
+    col=[];
+    this.dequeue=function(){
+        for (let i=0;i<col.length;i++){
+            if(col[i]>5){
+                  col.shift()
+            }
+            
+        }
+        
+    }
+    this.enqueue=function(val){
+        col.push(val);
+    }
+    this.print=function(){
+        console.log(col);
+     }
+}
+let q1=new Queue1();
+q1.enqueue(1);
+q1.enqueue(2);
+q1.enqueue(5);
+q1.enqueue(5);
+q1.enqueue(5);
+q1.enqueue(15);
+q1.print();
+console.log(q1.dequeue());
+q1.print()
