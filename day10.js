@@ -272,7 +272,8 @@ class Node{
 }
 class LinkedList{
     constructor(){
-        this.head=null
+        this.head=null;
+          this.length=0;
     }
 insertFirst(data,next){
     let node =new Node(data,next)
@@ -282,7 +283,8 @@ if (this.head===null){
 else{
     this.head=new Node(data,this.head)
 
-}    
+}  
+this.length++;  
 }
 
 getFirst(){
@@ -305,12 +307,23 @@ getLast()
     }
    
 }
+size(){
+    return this.length;
 
+}
+clear(){
+    this.head=null;
+}
 
 }
 let list= new LinkedList();
 list.insertFirst(45);
+list.insertFirst(10)
+list.insertFirst(10)
 list.insertFirst(10);
 // list.getFirst();
+console.log(list.size())/********************size of linked list***************** */
 console.log(list.getLast());
-//console.log(list);
+console.log(list);
+list.clear();
+console.log(list)
