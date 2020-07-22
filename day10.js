@@ -272,15 +272,19 @@ class Node{
 }
 class LinkedList{
     constructor(){
-        this.head=null;
+        this.head=null
     }
+insertFirst(data,next){
+    let node =new Node(data,next)
+if (this.head===null){
+    this.head=node;
 }
-let node=new Node(5);
-console.log(node);
-let list=new LinkedList();
-list.head=node;
-console.log(list)
-let node1=new Node(25,node);
-console.log(node1);
-list.head=node1;
+else{
+    this.head=new Node(data,this.head)
+
+}    }
+}
+let list= new LinkedList();
+list.insertFirst(45);
+list.insertFirst(10);
 console.log(list)
