@@ -474,3 +474,41 @@ people.add("name","3");
 people.remove("name1")
 console.log(people)
 
+///////////////////////////*********************set as datastructure************************* */
+function Set(){
+    this.storage=[];
+    this.add=add;
+    this.remove=remove;
+    this.has=has;
+}
+function has(vals){
+    return this.storage.indexOf(vals)!==-1
+}
+function add(vals){
+    if(this.storage.indexOf(vals)<0){
+        this.storage.push(vals);
+        return true;
+        
+    }
+    return false;
+}
+function remove(vals){
+    let pos=this.storage.indexOf(vals);
+    if(pos>-1){
+
+        this.storage.splice(pos,1);
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+let mySet=new Set();
+console.log(mySet.add(1))
+console.log(mySet.add(5))
+console.log(mySet.add(7))
+console.log(mySet.add(9))
+console.log(mySet.remove(9))
+console.log(mySet)
+console.log(mySet.has(8))
