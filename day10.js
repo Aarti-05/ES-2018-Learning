@@ -393,10 +393,23 @@ insertAt(index,data){
     preNode.next=new Node(data);
     return;
 
-}
+}}
+
+/******************************************midpoint of the linked list*************************************** */
+const midPoint=list=>{
+    let slowPointer=list.head;
+    let fastPointer=list.head;
+    while(fastPointer.next && fastPointer.next.next){
+        slowPointer=slowPointer.next;
+        fastPointer=fastPointer.next.next;
+    }
+    return slowPointer
 
 
 }
+
+
+
 let list= new LinkedList();
  //list.insertFirst(45);
 // list.insertFirst(10)
@@ -414,8 +427,10 @@ let list= new LinkedList();
 list.insertAt(0,5);
 list.insertAt(1,6);
 list.insertAt(2,56);
+list.insertAt(3,6);
 list.insertAt(4,6);
 console.log(list)
+console.log(midPoint(list))
 
 
 
