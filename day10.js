@@ -314,16 +314,38 @@ size(){
 clear(){
     this.head=null;
 }
+removeFirst(){
+    if(this.head===null){
+        return "llist is empty"
+    }
+   return this.head=this.head.next;
+}
+removeLast(){
+    if(this.head===null)
+    return "empty";
+    let curNode=this.head;
+    let preNode=this.head.next;
+    while(preNode){
+        if(preNode.next===null){
+            curNode.next=null;
+            return;
+        }
+        curNode=preNode;
+        preNode=preNode.next;
+    }
+}
 
 }
 let list= new LinkedList();
 list.insertFirst(45);
 list.insertFirst(10)
-list.insertFirst(10)
-list.insertFirst(10);
-// list.getFirst();
+list.insertFirst(12)
+list.insertFirst(11);
+//list.getFirst();
 console.log(list.size())/********************size of linked list***************** */
 console.log(list.getLast());
 console.log(list);
-list.clear();
+//list.clear();
+console.log(list.removeLast());
 console.log(list)
+/*********************************remove first and last node**************************** */
