@@ -334,12 +334,34 @@ removeLast(){
         preNode=preNode.next;
     }
 }
+insertLast(data,next){
+    let last=this.getLast();
+    if(!last){
+        last=new Node(data);
+    return;
+    }
+    last.next=new Node(data);
+  return;
+}
+getAt(index){
+    let count=0;
+    let node=this.head;
+    while(node){
+        if (count===index){
+            return node;
+        }
+        count++;
+        node=node.next;
+    }
+    return null;
+}
+
 
 }
 let list= new LinkedList();
 list.insertFirst(45);
-list.insertFirst(10)
-list.insertFirst(12)
+//list.insertFirst(10)
+//list.insertFirst(12)
 list.insertFirst(11);
 //list.getFirst();
 console.log(list.size())/********************size of linked list***************** */
@@ -347,5 +369,7 @@ console.log(list.getLast());
 console.log(list);
 //list.clear();
 console.log(list.removeLast());
+list.insertLast(27);
+console.log(list.getAt(1))
 console.log(list)
-/*********************************remove first and last node**************************** */
+
