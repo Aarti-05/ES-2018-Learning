@@ -355,21 +355,67 @@ getAt(index){
     }
     return null;
 }
+/*********************************remove node from particular index******************************* */
+removeAt(index){
+    if(this.head===null){
+        return;
+    }
+    if(index===0){
+        return this.head=this.head.next;
+    }
+    let preNode=this.getAt(index-1);
+    let curNode=this.getAt(index);
+    if(!preNode||!curNode){
+        return;
+    }
+    preNode.next=curNode.next;
+}
+insertAt(index,data){
+    if(this.head===0){
+     let node=new Node(data);
+     return
+    }
+    if(index===0)
+    {
+        this.head=new Node(data,this.head)
+        return;
+    }
+    let preNode=this.getAt(index-1);
+    let curNode=this.getAt(index);
+    if(!preNode&&!curNode){
+        this.getLast.next=new Node(data);
+        return;
+    }
+    if(preNode&&!curNode){
+        preNode.next=new Node(data);
+        return;
+    }
+    preNode.next=new Node(data);
+    return;
+
+}
 
 
 }
 let list= new LinkedList();
-list.insertFirst(45);
-//list.insertFirst(10)
-//list.insertFirst(12)
-list.insertFirst(11);
+ //list.insertFirst(45);
+// list.insertFirst(10)
+// list.insertFirst(12)
+// list.insertFirst(11);
 //list.getFirst();
-console.log(list.size())/********************size of linked list***************** */
-console.log(list.getLast());
-console.log(list);
-//list.clear();
-console.log(list.removeLast());
-list.insertLast(27);
-console.log(list.getAt(1))
+//console.log(list.size())/********************size of linked list***************** */
+// console.log(list.getLast());
+// console.log(list);
+// //list.clear();
+// console.log(list.removeLast());
+// list.insertLast(27);
+// console.log(list.getAt(1))
+// list.removeAt(0);
+list.insertAt(0,5);
+list.insertAt(1,6);
+list.insertAt(2,56);
+list.insertAt(4,6);
 console.log(list)
+
+
 
