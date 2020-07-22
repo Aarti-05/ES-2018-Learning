@@ -263,3 +263,24 @@ q1.enqueue(15);
 q1.print();
 console.log(q1.dequeue());
 q1.print()
+////**********************************linked list********************************* */
+class Node{
+    constructor(data,next=null){
+        this.data=data;
+        this.next=next;
+    }
+}
+class LinkedList{
+    constructor(){
+        this.head=null;
+    }
+}
+let node=new Node(5);
+console.log(node);
+let list=new LinkedList();
+list.head=node;
+console.log(list)
+let node1=new Node(25,node);
+console.log(node1);
+list.head=node1;
+console.log(list)
