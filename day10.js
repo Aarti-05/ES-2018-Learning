@@ -447,6 +447,30 @@ console.log(list)
 console.log(midPoint(list))
 list.getLast().next=list.getAt(0);
 console.log(circular(list))
+/*******************************dictionary************************************ */
+
+    function Dictionary(){
+        this.storage=[];
+        this.add=add;
+        this.remove=remove;
+        //this.find=find;
+
+    }
+    function add(key,value){
+        this.storage[key]=value;
+    }
+    function remove(key){
+        delete this.storage[key];
+    }
+    function find (key){
+        return this.storage[key];
+    }
 
 
+let people= new Dictionary();
+people.add("name2","1");
+people.add("name1","2");
+people.add("name","3");
+people.remove("name1")
+console.log(people)
 
