@@ -282,9 +282,35 @@ if (this.head===null){
 else{
     this.head=new Node(data,this.head)
 
-}    }
+}    
+}
+
+getFirst(){
+    return this.head;
+}
+
+getLast()
+{
+    if(this.head===null){
+        return (`this is last node `) ;
+    }
+    let currentNode=this.head;
+    while(currentNode){
+        if(currentNode.next===null){
+            return currentNode;
+        }
+        
+            currentNode=currentNode.next
+    
+    }
+   
+}
+
+
 }
 let list= new LinkedList();
 list.insertFirst(45);
 list.insertFirst(10);
-console.log(list)
+// list.getFirst();
+console.log(list.getLast());
+//console.log(list);
