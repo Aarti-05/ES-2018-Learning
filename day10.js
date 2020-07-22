@@ -480,6 +480,11 @@ function Set(){
     this.add=add;
     this.remove=remove;
     this.has=has;
+    this.size=size;
+    this.union=union;
+    this.intersect=intersect;
+    this.show=show;
+    this.diff=diff;
 }
 function has(vals){
     return this.storage.indexOf(vals)!==-1
@@ -502,13 +507,72 @@ function remove(vals){
     else {
         return false;
     }
+    
+}
+function size(){
+    return this.storage.length;
+}
+function union(set){
+    let tempset=new Set();
+    for (let i=0;i<this.storage.length;i++){
+        console.log(this.storage.length)
+            tempset.storage.push(this.storage[i]);
+        
+    }
+    for (let i=0;i<set.storage.length;i++){
+        console.log(set.storage.length)
+        if(!tempset.has(set.storage[i]))
+        tempset.storage.push(set.storage[i])
+    }
+    return tempset;
+}
+function intersect(set1){
+    let tempset1=new Set();
+    for (let i=0;i<this.storage.length;i++){
+        console.log(this.storage.length)
+        if(set1.has(this.storage[i])){
+
+            tempset1.storage.push(this.storage[i]);
+        }}
+return tempset1;
+}
+function show(){
+    return this.storage;
+}
+function diff(set1){
+    let tempset1=new Set();
+    for (let i=0;i<this.storage.length;i++){
+        console.log(this.storage.length)
+        if(!set1.has(this.storage[i])){
+
+            tempset1.storage.push(this.storage[i]);
+        }}
+return tempset1;
+
 }
 
 let mySet=new Set();
 console.log(mySet.add(1))
 console.log(mySet.add(5))
-console.log(mySet.add(7))
 console.log(mySet.add(9))
+console.log(mySet.add(7))
+console.log(mySet.add(7))
 console.log(mySet.remove(9))
 console.log(mySet)
 console.log(mySet.has(8))
+console.log(mySet.size())
+let set1=new Set();
+console.log(set1.add(5))
+console.log(set1.add(9))
+console.log(set1.add(3))
+console.log(set1.add(85))
+let set2= new Set();
+set2=set1.union(mySet)
+console.log(set2.show())
+let set3=new Set();
+set3=set1.intersect(mySet)
+console.log(set3.show())
+let set4=new Set()
+set4=set1.diff(mySet);
+console.log(set4.show());
+
