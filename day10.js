@@ -407,6 +407,20 @@ const midPoint=list=>{
 
 
 }
+/*********************circular linked list******************** */
+const circular=(list)=>{
+    let slowPointer=list.head;
+    let fastPointer=list.head;
+    while(fastPointer.next && fastPointer.next.next){
+        slowPointer=slowPointer.next;
+        fastPointer=fastPointer.next.next;
+        if (slowPointer===fastPointer){
+            return true;
+        }
+        
+    }
+    return false
+}
 
 
 
@@ -428,9 +442,11 @@ list.insertAt(0,5);
 list.insertAt(1,6);
 list.insertAt(2,56);
 list.insertAt(3,6);
-list.insertAt(4,6);
+list.insertAt(4,60);
 console.log(list)
 console.log(midPoint(list))
+list.getLast().next=list.getAt(0);
+console.log(circular(list))
 
 
 
