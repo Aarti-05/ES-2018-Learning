@@ -632,4 +632,4 @@ console.log(n.children[1]);
 console.log(n.children[2]);
 console.log(tree) ;
 console.log(tree.bf())
-console.log(tree.bf())
+console.log(tree.df())
