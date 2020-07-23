@@ -575,4 +575,61 @@ console.log(set3.show())
 let set4=new Set()
 set4=set1.diff(mySet);
 console.log(set4.show());
-
+/////*************************Tree Datastructure***************************** */
+class Node1{
+    constructor(data){
+        this.data=data;
+        this.children=[];
+    }
+    add(data){
+        let node=new Node1(data);
+        this.children.push(node);
+    }
+    remove(data){
+        this.children=this.children.filter((node)=>{
+            return node.data!==data;
+        })
+    }
+}
+class Tree{
+    constructor(){
+        this.root=null;
+    }
+    bf(){
+        let arr=[this.root];
+        console.log(arr.length)
+       console.log(arr)
+        while(arr.length){
+            let a=arr.shift();
+            
+            console.log(a.data);
+            //
+            console.log(arr.push(...a.children));
+            
+        }
+        
+    }
+    df(){
+        let arr1=[this.root];
+        while(arr1.length){
+            let b=arr1.shift();
+            console.log(b.data);
+            console.log(arr1.unshift(...b.children))
+        }
+    }
+}
+let tree=new Tree();
+let n=new Node1(0);
+tree.root=n;
+n.add("first");
+n.add("second");
+//n.children[0].add(111);
+ //n.add("third");
+//n.children[1].add(121);
+ //n.children[2].add(131);
+console.log(n.children[0]);
+console.log(n.children[1]);
+console.log(n.children[2]);
+console.log(tree) ;
+console.log(tree.bf())
+console.log(tree.bf())
