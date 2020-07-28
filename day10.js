@@ -390,7 +390,10 @@ insertAt(index,data){
         preNode.next=new Node(data);
         return;
     }
-    preNode.next=new Node(data);
+    
+
+        preNode.next=new Node(data);
+    
     return;
 
 }}
@@ -425,8 +428,9 @@ const circular=(list)=>{
 
 
 let list= new LinkedList();
- //list.insertFirst(45);
+//  list.insertFirst(45);
 // list.insertFirst(10)
+console.log(list)
 // list.insertFirst(12)
 // list.insertFirst(11);
 //list.getFirst();
@@ -440,9 +444,10 @@ let list= new LinkedList();
 // list.removeAt(0);
 list.insertAt(0,5);
 list.insertAt(1,6);
-list.insertAt(2,56);
+ //list.insertAt(2,56);
 list.insertAt(3,6);
-list.insertAt(4,60);
+ list.insertAt(4,60);
+//list.insertAt(7,70)
 console.log(list)
 console.log(midPoint(list))
 list.getLast().next=list.getAt(0);
@@ -614,8 +619,9 @@ class Tree{
         while(arr1.length){
             let b=arr1.shift();
             console.log(b.data);
-            console.log(arr1.unshift(...b.children))
+           console.log (arr1.unshift(...b.children))
         }
+        
     }
 }
 let tree=new Tree();
@@ -623,10 +629,10 @@ let n=new Node1(0);
 tree.root=n;
 n.add("first");
 n.add("second");
-//n.children[0].add(111);
- //n.add("third");
-//n.children[1].add(121);
- //n.children[2].add(131);
+n.children[0].add(111);
+ n.add("third");
+n.children[1].add(121);
+ n.children[2].add(131);
 console.log(n.children[0]);
 console.log(n.children[1]);
 console.log(n.children[2]);
