@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Aarti-05/ES-2018-Learning/issues"
   },
-  "homepage": "https://github.com/Aarti-05/ES-2018-Learning#readme"
+  "homepage": "https://github.com/Aarti-05/ES-2018-Learning#readme",
+  "dependencies": {
+    "jest-cli": "^26.2.1"
+  }
 }
