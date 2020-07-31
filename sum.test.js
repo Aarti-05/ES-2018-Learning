@@ -1,4 +1,4 @@
-const sum=require('./sum')
-test("checkin 2+2",()=>{
-    expect(sum()).toBe(4);
+const data=require('./sum')
+test("Object",()=>{
+    expect(data()).toEqual({"one":1});
 })
