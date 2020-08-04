@@ -24,17 +24,23 @@
             font-size: 23px;
             font-weight: bold;
             font-style: italic;
+
         } */
+        /* body{
+            background-color:rgb(221, 214, 240);
+        }
         #secondparagraph{
             color:rgb(112, 4, 49);
             background-color: seagreen;
             font-size: 25px;
-            height: 1100px;
-            width: 1000px;
+            height: 100px;
+            width: 400px;
             border:solid;
-          background-image: url(Penguins.jpg);
-          background-repeat: no-repeat;
-           
+            border-radius: 10px;
+          /* background-image: url(Penguins.jpg); */
+          /* background-repeat: no-repeat; */
+           /* padding:100px;
+    box-sizing: border-box;
            
     
         }
@@ -42,18 +48,67 @@
     font-size: 25px;
     background-color: salmon;
     height: 100px;
-    width: 800px;
+    width: 100px;
     border: solid;
     border-radius: 10px ;
     border-end-end-radius: 5px;
+} */ 
+*{
+    box-sizing: border-box;
 }
-    </style>
+body{
+    background-color: rgb(156, 156, 180);
+    box-sizing: border-box;
+    
+}
+h2{
+    text-align: center;
+}
+.container{
+border: 4px solid purple;
+width: 1000px;
+margin:30px auto;
+}
+.items{
+ border: 4px solid purple;
+ margin: 12px 10px;
+ padding: 12px;
+ }
+#Fruits{
+float: left;
+width: 47%;
+}
+#Vegetables{
+    float: left;
+width: 47%;
+}
+#Grocery{
+    clear: both;
+width: 90%;
+}
+p,h3{
+    text-align: center;
+}
+</style>
 </head>
 <body>
     <!-- <p style="color:red;">This is a paragraph</p> -->
    
-    <p id="red">welcome</p>
+    <!-- <p id="red">welcome</p> -->
     <!-- <p id="second paragraph"class="redelement">this is <span>a</span> paragraph</p> -->
-    <p id="secondparagraph"class="redelement">this is <span>a</span> paragraph</p>
+    <!-- <p id="secondparagraph"class="redelement">this is <span>a</span> paragraph</p> -->
+    <div class="container">
+    <h2>Welcome To My Store</h2>
+    <div id="Fruits" class="items">
+    <h3>Fruits</h3>
+    <p id="First" class="FirstPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequatur, facilis vel optio obcaecati corrupti explicabo earum dicta excepturi eum voluptates cumque nesciunt facere totam voluptatum error suscipit, adipisci fuga reiciendis deleniti sunt voluptatem. Quasi magni, veniam optio necessitatibus omnis iure quos veritatis qui, repellat ipsa maiores repellendus placeat ratione consectetur a laborum! Eius sequi sit libero architecto delectus. Deserunt </p></div>
+    <div id="Vegetables" class="items">
+        <h3>Vegetables</h3>
+        <p id="second" class="secondPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequatur, facilis vel optio obcaecati corrupti explicabo earum dicta excepturi eum voluptates cumque nesciunt facere totam voluptatum error suscipit, adipisci fuga reiciendis deleniti sunt voluptatem. Quasi magni, veniam optio necessitatibus omnis iure quos veritatis qui, repellat ipsa maiores repellendus placeat ratione consectetur a laborum! Eius sequi sit libero architecto delectus. Deserunt </p></div>
+        <div id="Grocery" class="items">
+            <h3>Grocery</h3>
+            <p id="third" class="thirdPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequatur, facilis vel optio obcaecati corrupti explicabo earum dicta excepturi eum voluptates cumque nesciunt facere totam voluptatum error suscipit, adipisci fuga reiciendis deleniti sunt voluptatem. Quasi magni, veniam optio necessitatibus omnis iure quos veritatis qui, repellat ipsa maiores repellendus placeat ratione consectetur a laborum! Eius sequi sit libero architecto delectus. Deserunt </p></div>
+    
+</div>
 </body>
 </html>

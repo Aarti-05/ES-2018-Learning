@@ -3,12 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML learning
-
-    </title>
+    <title>HTML learning</title>
+    <style>
+        .btn{
+            background-color: rgb(236, 225, 225);
+             border: none;
+             cursor:pointer;
+        }
+        /* a{
+            text-decoration: none;
+        } */
+        .navbar{
+            background-color: rgb(235, 139, 139);
+            border-radius: 10px;
+        }
+        .navbar ul{
+            overflow: hidden;
+        }
+         .navbar li{
+             float:left;
+             list-style: none;
+           margin: 10px 20px; 
+            }
+         .navbar li a{
+             text-decoration: none;
+             color: black;
+            /* padding: 5px 5px; */
+         }
+         .search{
+             float: right;
+         margin-right: 30px;
+         margin-top: 8px;
+          }
+         .navbar input{
+             border: 2px solid;
+             border-radius: 10px;
+             padding:2px 10px;
+         }
+    </style>
 </head>
 <body>
-    <ul type="disc"> 
+    <!-- <ul type="disc"> 
         <li>this is my first list</li>
         <li>this is my second list</li>
         <li>this is my third list</li>
@@ -20,7 +55,7 @@
         <li>this is my third list</li>
     </ol>
     <!-- table -->
-    <table>
+    <!-- <table>
    
        <tr>
            <th>Name</th>
@@ -39,6 +74,21 @@
         <tbody><td>Ria</td>
             <td>3</td>
             <td>60</td></tbody>
+            
     </table>
+    <a href="" class="btn">Read more</a>
+    <button class="btn">Contact Us</button> --> 
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact US</a></li>
+                <div class="search">
+                <input type="search" name="search" id="search" placeholder="search here"></div>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
